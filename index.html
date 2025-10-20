@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>My Dashboard</h1>
+      <div id="clock" class="clock" aria-live="polite">--:--:--</div>
+    </div>
+    <div class="controls">
+      <label class="theme-toggle">
+        <input id="themeToggle" type="checkbox" aria-label="Toggle dark theme" />
+        <span>Dark</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="search">
+      <form id="searchForm">
+        <input id="searchInput" type="search" placeholder="Search Google or type a URL" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="grid">
+      <div class="card links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://news.ycombinator.com" target="_blank" rel="noopener">Hacker News</a></li>
+          <li><a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a></li>
+          <li><a href="https://calendar.google.com" target="_blank" rel="noopener">Calendar</a></li>
+        </ul>
+      </div>
+
+      <div class="card notes">
+        <h2>Notes</h2>
+        <textarea id="notes" placeholder="Write quick notes here..."></textarea>
+        <div class="notes-controls">
+          <button id="saveNotes">Save</button>
+          <button id="clearNotes">Clear</button>
+        </div>
+      </div>
+
+      <div class="card todo">
+        <h2>Focus</h2>
+        <p id="focusText">Add a short focus for today in the Notes area.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Static personal dashboard — saved locally in your browser.</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
