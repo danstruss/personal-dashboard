@@ -6,10 +6,10 @@
   <title>Personal Dashboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-weather-api-key="">
   <header class="top">
     <div class="brand">
-      <h1>My Dashboard</h1>
+      <h1>Dan's Dashboard-orama</h1>
       <div id="clock" class="clock" aria-live="polite">--:--:--</div>
     </div>
     <div class="controls">
@@ -37,6 +37,32 @@
           <li><a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a></li>
           <li><a href="https://calendar.google.com" target="_blank" rel="noopener">Calendar</a></li>
         </ul>
+      </div>
+
+      <div class="card weather" id="weatherCard">
+        <h2>Weather</h2>
+        <div class="weather-content" id="weatherContent">
+          <div class="weather-loading" id="weatherLoading">Loading...</div>
+          <div class="weather-error" id="weatherError" hidden></div>
+
+          <div class="weather-main" id="weatherMain" hidden>
+            <div class="weather-row">
+              <div>
+                <div class="weather-location" id="weatherLocation">—</div>
+                <div class="weather-desc" id="weatherDesc"></div>
+              </div>
+              <div class="weather-right">
+                <img id="weatherIcon" class="weather-icon" alt="" />
+                <div class="weather-temp" id="weatherTemp">--°</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-controls">
+            <button id="setWeatherKey">Set API Key</button>
+            <button id="refreshWeather">Refresh</button>
+          </div>
+        </div>
       </div>
 
       <div class="card notes">

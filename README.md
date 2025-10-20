@@ -34,6 +34,13 @@ Two quick options:
 ## Next steps / ideas
 
 - Add weather widget (requires a free API key)
+  - How to enable the weather widget
+    1. Get a (free) API key from OpenWeatherMap: https://openweathermap.org/api
+    2. In the dashboard you can add the key in one of two ways:
+       - Open the page and click the "Set API Key" button in the Weather card, then paste your key.
+       - Or add the key directly in the `index.html` file as an attribute on the <body> tag: `data-weather-api-key="YOUR_KEY"`.
+    3. The widget will attempt to use your browser's geolocation; allow location permissions for best results. If you decline, it falls back to London.
+    4. The key is stored in `localStorage` so you won't need to re-enter it on the same browser.
 - Add RSS/news feed
 - Make links editable
 - Add keyboard shortcuts
